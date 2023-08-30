@@ -1,6 +1,7 @@
+import { Outlet } from "react-router-dom";
 import Cabecalho from "./components/Cabecalho";
-import Conteudo from "./components/Conteudo";
 import Rodape from "./components/Rodape";
+import './App.css'
 
 export default function App() {
 
@@ -10,16 +11,9 @@ export default function App() {
   return (
     <>
       {/* ÁREA IMPERATIVA E APENAS DE RODAR, NÃO DECLARAR*/}
-      <div className="container">
-
-        <Cabecalho nomeDoUsuario={meuNome}>
-          Hello World!
-        </Cabecalho>
-        <Conteudo/>
-        <Rodape/>
-
-
-      </div>
+      <Cabecalho/>
+      <Outlet/>
+      <Rodape/>
       </>
   )
 }
